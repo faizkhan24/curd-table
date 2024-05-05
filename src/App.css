@@ -1,38 +1,77 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+[data-theme="light"] {
+    --bg-color: #ffffff;
+    --text-color: black;
+    --button-bg : rgb(229, 229, 229);
+    --button-border: rgb(222, 222, 222);
+    --suggestion-bg: #ffffff;
+    --search-link: rgb(201, 199, 199);
+    --shimmer-lines: rgb(210, 210, 210);
+    --table-head: rgb(229, 229, 229);
+    --submit-bg: rgb(15, 83, 230);
+    --cancel-text : black;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  
+  /* Dark mode styles */
+  [data-theme="dark"] {
+    --bg-color: #2f2f2f;
+    --text-color: #ffffff;
+    --button-bg : #2f2f2f;
+    --button-border: #616161;
+    --suggestion-bg: #3e3e3e;
+    --search-link: #c3c3c3;
+    --shimmer-lines: gray;
+    --table-head: rgb(6, 209, 111);
+    --submit-bg: rgb(200, 25, 25);
+    --cancel-text : black;
   }
-  to {
-    transform: rotate(360deg);
+  
+  .dark {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    
+   
   }
-}
+  *{
+    transition: all 0.02s ease-in-out;
+   
+  }
+
+  .input{
+    background-color: var(--suggestion-bg);
+    border: 0.1rem solid var(--button-border);
+    color: var(--text-color);
+    /* height: 42px; */
+    /* width: 536px; */
+    
+   
+  }
+
+  .spinner {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    border: 9px solid;
+    border-color: #dbdcef;
+    border-right-color: #474bff;
+    animation: spinner-d3wgkg 1s infinite linear;
+ }
+ 
+ @keyframes spinner-d3wgkg {
+    to {
+       transform: rotate(1turn);
+    }
+ }
+
+ .table-head{
+  background-color: var(--table-head);
+  color: var(--text-color);
+ }
+ .submit-btn{
+  background-color: var(--submit-bg);
+ }
+ .show-data{
+  background-color: var(--submit-bg);
+ }
+ .cancel-btn {
+  color: var(--cancel-text);
+ }
